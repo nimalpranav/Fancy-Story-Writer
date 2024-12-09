@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fancy Story Writer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📖 Fancy Story Writer</h1>
+      <div class="theme-selector">
+        <button onclick="setTheme('light')">🌞 Light</button>
+        <button onclick="setTheme('dark')">🌙 Dark</button>
+        <button onclick="setTheme('sepia')">📜 Sepia</button>
+      </div>
+    </header>
+    <div class="toolbar">
+      <button onclick="formatText('bold')"><b>B</b></button>
+      <button onclick="formatText('italic')"><i>I</i></button>
+      <button onclick="formatText('underline')"><u>U</u></button>
+      <button onclick="formatText('strikeThrough')"><s>S</s></button>
+      <button onclick="formatText('insertOrderedList')">1.</button>
+      <button onclick="formatText('insertUnorderedList')">•</button>
+      <button onclick="formatText('justifyLeft')">⇤</button>
+      <button onclick="formatText('justifyCenter')">⏺</button>
+      <button onclick="formatText('justifyRight')">⇥</button>
+      <button onclick="clearText()">🗑️ Clear</button>
+      <button onclick="saveStory()">💾 Save</button>
+      <button onclick="loadStory()">📂 Load</button>
+      <button onclick="deleteStory()">❌ Delete</button>
+      <button onclick="exportPDF()">📄 Export PDF</button>
+    </div>
+    <div id="editor" contenteditable="true" placeholder="Start writing your story..." oninput="updateWordCount()"></div>
+    <div class="status-bar">
+      <span id="word-count">Words: 0</span>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

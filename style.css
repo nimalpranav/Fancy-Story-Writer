@@ -1,0 +1,115 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f4f9;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 10px 20px;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+.theme-selector button {
+  background: #fff;
+  color: #333;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.theme-selector button:hover {
+  background: #ddd;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+.toolbar button {
+  background: #6a11cb;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.toolbar button:hover {
+  background: #4c0c9b;
+}
+
+#editor {
+  padding: 20px;
+  min-height: 300px;
+  font-size: 18px;
+  line-height: 1.6;
+  outline: none;
+}
+
+#editor:empty::before {
+  content: attr(placeholder);
+  color: #aaa;
+  font-style: italic;
+}
+
+.status-bar {
+  padding: 10px;
+  background: #f4f4f4;
+  text-align: right;
+  font-size: 14px;
+}
+
+/* Themes */
+body.light {
+  background: #f4f4f9;
+  color: #333;
+}
+
+body.dark {
+  background: #1e1e1e;
+  color: #f4f4f4;
+}
+
+body.sepia {
+  background: #f4ecd8;
+  color: #5b4636;
+}
